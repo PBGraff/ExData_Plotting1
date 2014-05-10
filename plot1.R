@@ -6,9 +6,11 @@ DT <- read.csv("household_power_consumption.txt",na.strings=c("?"),colClasses=c(
 # select rows with required dates
 GAP <- DT$Global_active_power[DT$Date=="1/2/2007"|DT$Date=="2/2/2007"]
 
+## set graphics device
+png(file="plot1.png",width=480,height=480,units="px")
+
 ## make plot
 hist(GAP,col="red",xlab="Global Active Power (kilowatts)",main="Global Active Power")
 
-## save to png
-dev.copy(png,file="plot1.png",width=480,height=480,units="px")
+## close file
 dev.off()

@@ -8,9 +8,11 @@ dat <- DT[DT$Date=="1/2/2007"|DT$Date=="2/2/2007",c("Date","Time","Global_active
 GAP <- dat$Global_active_power
 datetime<-as.POSIXct(strptime(paste(dat$Date,dat$Time),format="%d/%m/%Y %H:%M:%S"))
 
+## set graphics device
+png(file="plot2.png",width=480,height=480,units="px")
+
 ## make plot
 plot(datetime,GAP,type="l",xlab="",ylab="Global Active Power (kilowatts)")
 
-## save to png
-dev.copy(png,file="plot2.png",width=480,height=480,units="px")
+## close file
 dev.off()
