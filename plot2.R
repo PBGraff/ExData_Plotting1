@@ -10,5 +10,5 @@ datetime<-as.POSIXct(strptime(paste(dat$Date,dat$Time),format="%d/%m/%Y %H:%M:%S
 plot(datetime,GAP,type="l",xlab="",ylab="Global Active Power (kilowatts)")
 
 ## save to png
-dev.copy(png,file="plot2.png")
+dev.copy(png,file="plot2.png",width=480,height=480,units="px")
 dev.off()

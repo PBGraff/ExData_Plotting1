@@ -8,5 +8,5 @@ GAP <- DT$Global_active_power[DT$Date=="1/2/2007"|DT$Date=="2/2/2007"]
 hist(GAP,col="red",xlab="Global Active Power (kilowatts)",main="Global Active Power")
 
 ## save to png
-dev.copy(png,file="plot1.png")
+dev.copy(png,file="plot1.png",width=480,height=480,units="px")
 dev.off()
