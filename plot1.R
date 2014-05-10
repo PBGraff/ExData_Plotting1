@@ -1,5 +1,3 @@
-library(data.table)
-
 ## read in data
 DT <- read.csv("household_power_consumption.txt",na.strings=c("?"),colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),sep=";")
 
